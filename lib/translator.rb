@@ -14,6 +14,7 @@ def load_library(file_path)
     
     memo
   end
+  emoticon_library
 end
 
 def get_japanese_emoticon
