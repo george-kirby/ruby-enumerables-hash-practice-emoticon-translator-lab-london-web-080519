@@ -17,11 +17,15 @@ def load_library(file_path)
   emoticon_library
 end
 
-def get_japanese_emoticon(english_emoticon)
+def get_japanese_emoticon(file_path, english_emoticon)
   # code goes here
-  load_library('lib/emoticons.yml')
+  load_library(file_path)
   
-  japanese_emoticon = emoticon_library[english_emoticon]
+  if emoticon_library[english_emoticon]
+    japanese_emoticon = emoticon_library[english_emoticon]
+  else
+    "Sorry, that is not a known emoticon."
+  end
   
 end
 
